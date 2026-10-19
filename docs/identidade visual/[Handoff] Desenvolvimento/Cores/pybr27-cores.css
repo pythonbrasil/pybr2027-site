@@ -1,0 +1,261 @@
+/* Python Brasil 2027 · tokens de cor (paleta Suave e calorosa)
+   Fonte: Figma Identidade-Visual, página Cores, Wireframe 1. Gerado em 2026-10-11.
+   Espelha as variáveis do Figma (coleções Cores · Primitivos e Cores · Semânticos).
+   [Decisão] action no 700 para blue, orange e cream. [Hipótese] modo escuro. */
+
+:root {
+  /* 1. Primitivos: única camada com hex */
+  --color-green-50: #F1F9F5;
+  --color-green-100: #DCEFE7;
+  --color-green-200: #B6DED0;
+  --color-green-300: #81C7B5;
+  --color-green-400: #62AD99;
+  --color-green-500: #448E7A;
+  --color-green-600: #347763;
+  --color-green-700: #2A6253;
+  --color-green-800: #204E43;
+  --color-green-900: #173D35;
+  --color-blue-50: #F0F8FA;
+  --color-blue-100: #DDEEF3;
+  --color-blue-200: #BEDFEA;
+  --color-blue-300: #9CCDE0;
+  --color-blue-400: #7FB6D0;
+  --color-blue-500: #5B9DBB;
+  --color-blue-600: #447E9B;
+  --color-blue-700: #35647F;
+  --color-blue-800: #294F67;
+  --color-blue-900: #1D3B50;
+  --color-orange-50: #FFF9ED;
+  --color-orange-100: #FFF0D8;
+  --color-orange-200: #FADCA9;
+  --color-orange-300: #F4BF69;
+  --color-orange-400: #EBAB4F;
+  --color-orange-500: #D99137;
+  --color-orange-600: #B97228;
+  --color-orange-700: #945A25;
+  --color-orange-800: #754821;
+  --color-orange-900: #56361C;
+  --color-cream-50: #FFF9EA;
+  --color-cream-100: #F8EFD9;
+  --color-cream-200: #F0E2C4;
+  --color-cream-300: #E7D3A9;
+  --color-cream-400: #D4BA8A;
+  --color-cream-500: #BA9B69;
+  --color-cream-600: #977A50;
+  --color-cream-700: #765F3F;
+  --color-cream-800: #5B4933;
+  --color-cream-900: #423626;
+  --color-red-50: #FFF2EF;
+  --color-red-100: #FCE3DD;
+  --color-red-200: #F5C3B6;
+  --color-red-300: #EA9D8B;
+  --color-red-400: #DF7C68;
+  --color-red-500: #D76552;
+  --color-red-600: #BA4F41;
+  --color-red-700: #983F35;
+  --color-red-800: #76352E;
+  --color-red-900: #572B27;
+  --color-neutral-50: #F7F8F5;
+  --color-neutral-100: #EBEEEA;
+  --color-neutral-200: #D9E0D9;
+  --color-neutral-300: #BDC9C0;
+  --color-neutral-400: #95A69A;
+  --color-neutral-500: #728678;
+  --color-neutral-600: #566B5D;
+  --color-neutral-700: #405548;
+  --color-neutral-800: #2D4136;
+  --color-neutral-900: #1D3028;
+
+  /* 2. Semânticos · interface neutra (Figma) */
+  --surface-default: var(--color-neutral-50);
+  --surface-subtle: var(--color-neutral-100);
+  --surface-disabled: var(--color-neutral-200);
+  --background-default: var(--color-neutral-100);
+  --background-subtle: var(--color-neutral-200);
+  --border-subtle: var(--color-neutral-300);
+  --divider-default: var(--color-neutral-300);
+  --border-default: var(--color-neutral-400); /* só decorativo (cartão, seção, módulo): 2,40:1 */
+  --border-strong: var(--color-neutral-500);  /* contorno de campo: 3,65:1. Campo sempre sobre surface-default; sobre background-subtle cai para 2,89 */
+  --text-disabled: var(--color-neutral-600);
+  --text-tertiary: var(--color-neutral-700);
+  --text-secondary: var(--color-neutral-800);
+  --text-primary: var(--color-neutral-900);
+  --text-inverse: var(--color-neutral-50);
+  --focus-ring: var(--color-blue-600);
+  --page-creme: var(--color-cream-50);
+
+  /* 3. Semânticos · famílias (action ajustado para AA) */
+  /* green */
+  --green-surface-default: var(--color-green-50);
+  --green-surface-subtle: var(--color-green-100);
+  --green-border: var(--color-green-200);
+  --green-tint-default: var(--color-green-100);
+  --green-tint-hover: var(--color-green-200);
+  --green-tint-pressed: var(--color-green-300);
+  --green-tint-text: var(--color-green-800);
+  --green-brand: var(--color-green-500); /* decorativo: nunca texto */
+  --green-action-default: var(--color-green-600);
+  --green-action-hover: var(--color-green-700);
+  --green-action-pressed: var(--color-green-800);
+  --green-text: var(--color-green-700);
+  --green-module-bg: var(--color-green-100);
+  --green-module-fg: var(--color-green-700);
+  /* blue */
+  --blue-surface-default: var(--color-blue-50);
+  --blue-surface-subtle: var(--color-blue-100);
+  --blue-border: var(--color-blue-200);
+  --blue-tint-default: var(--color-blue-100);
+  --blue-tint-hover: var(--color-blue-200);
+  --blue-tint-pressed: var(--color-blue-300);
+  --blue-tint-text: var(--color-blue-800);
+  --blue-brand: var(--color-blue-500); /* decorativo: nunca texto */
+  --blue-action-default: var(--color-blue-700);
+  --blue-action-hover: var(--color-blue-800);
+  --blue-action-pressed: var(--color-blue-900);
+  --blue-text: var(--color-blue-700);
+  --blue-module-bg: var(--color-blue-100);
+  --blue-module-fg: var(--color-blue-700);
+  /* orange */
+  --orange-surface-default: var(--color-orange-50);
+  --orange-surface-subtle: var(--color-orange-100);
+  --orange-border: var(--color-orange-200);
+  --orange-tint-default: var(--color-orange-100);
+  --orange-tint-hover: var(--color-orange-200);
+  --orange-tint-pressed: var(--color-orange-300);
+  --orange-tint-text: var(--color-orange-800);
+  --orange-brand: var(--color-orange-500); /* decorativo: nunca texto */
+  --orange-action-default: var(--color-orange-700);
+  --orange-action-hover: var(--color-orange-800);
+  --orange-action-pressed: var(--color-orange-900);
+  --orange-text: var(--color-orange-700);
+  --orange-module-bg: var(--color-orange-100);
+  --orange-module-fg: var(--color-orange-700);
+  /* cream */
+  --cream-surface-default: var(--color-cream-50);
+  --cream-surface-subtle: var(--color-cream-100);
+  --cream-border: var(--color-cream-200);
+  --cream-tint-default: var(--color-cream-100);
+  --cream-tint-hover: var(--color-cream-200);
+  --cream-tint-pressed: var(--color-cream-300);
+  --cream-tint-text: var(--color-cream-800);
+  --cream-brand: var(--color-cream-500); /* decorativo: nunca texto */
+  --cream-action-default: var(--color-cream-700);
+  --cream-action-hover: var(--color-cream-800);
+  --cream-action-pressed: var(--color-cream-900);
+  --cream-text: var(--color-cream-700);
+  --cream-module-bg: var(--color-cream-100);
+  --cream-module-fg: var(--color-cream-700);
+  /* red */
+  --red-surface-default: var(--color-red-50);
+  --red-surface-subtle: var(--color-red-100);
+  --red-border: var(--color-red-200);
+  --red-tint-default: var(--color-red-100);
+  --red-tint-hover: var(--color-red-200);
+  --red-tint-pressed: var(--color-red-300);
+  --red-tint-text: var(--color-red-900);
+  --red-brand: var(--color-red-500); /* decorativo: nunca texto */
+  --red-action-default: var(--color-red-600);
+  --red-action-hover: var(--color-red-700);
+  --red-action-pressed: var(--color-red-800);
+  --red-text: var(--color-red-700);
+  --red-module-bg: var(--color-red-100);
+  --red-module-fg: var(--color-red-700);
+}
+
+/* Modo escuro [Hipótese] */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background-default: var(--color-green-900);
+    --surface-default: var(--color-neutral-800);
+    --text-primary: var(--color-neutral-50);
+    --text-secondary: var(--color-neutral-200);
+    --text-tertiary: var(--color-neutral-300);
+    --text-disabled: var(--color-neutral-400);
+    --border-strong: var(--color-neutral-400);
+    --focus-ring: var(--color-blue-200);
+    --surface-subtle: var(--color-neutral-800);
+    --surface-disabled: var(--color-neutral-700);
+    --background-subtle: var(--color-neutral-900);
+    --border-subtle: var(--color-neutral-700);
+    --divider-default: var(--color-neutral-700);
+    --border-default: var(--color-neutral-600);
+    --page-creme: var(--color-green-900);
+    --green-surface-default: var(--color-green-900);
+    --green-surface-subtle: var(--color-green-800);
+    --green-border: var(--color-green-700);
+    --blue-surface-default: var(--color-blue-900);
+    --blue-surface-subtle: var(--color-blue-800);
+    --blue-border: var(--color-blue-700);
+    --orange-surface-default: var(--color-orange-900);
+    --orange-surface-subtle: var(--color-orange-800);
+    --orange-border: var(--color-orange-700);
+    --cream-surface-default: var(--color-cream-900);
+    --cream-surface-subtle: var(--color-cream-800);
+    --cream-border: var(--color-cream-700);
+    --red-surface-default: var(--color-red-900);
+    --red-surface-subtle: var(--color-red-800);
+    --red-border: var(--color-red-700);
+    --green-text: var(--color-green-200);
+    --green-module-bg: var(--color-green-800);
+    --green-module-fg: var(--color-green-200);
+    --blue-text: var(--color-blue-200);
+    --blue-module-bg: var(--color-blue-800);
+    --blue-module-fg: var(--color-blue-200);
+    --orange-text: var(--color-orange-200);
+    --orange-module-bg: var(--color-orange-800);
+    --orange-module-fg: var(--color-orange-200);
+    --cream-text: var(--color-cream-200);
+    --cream-module-bg: var(--color-cream-800);
+    --cream-module-fg: var(--color-cream-200);
+    --red-text: var(--color-red-200);
+    --red-module-bg: var(--color-red-800);
+    --red-module-fg: var(--color-red-200);
+  }
+}
+:root[data-theme="dark"] {
+  --background-default: var(--color-green-900);
+  --surface-default: var(--color-neutral-800);
+  --text-primary: var(--color-neutral-50);
+  --text-secondary: var(--color-neutral-200);
+  --text-tertiary: var(--color-neutral-300);
+  --text-disabled: var(--color-neutral-400);
+  --border-strong: var(--color-neutral-400);
+  --focus-ring: var(--color-blue-200);
+  --surface-subtle: var(--color-neutral-800);
+  --surface-disabled: var(--color-neutral-700);
+  --background-subtle: var(--color-neutral-900);
+  --border-subtle: var(--color-neutral-700);
+  --divider-default: var(--color-neutral-700);
+  --border-default: var(--color-neutral-600);
+  --page-creme: var(--color-green-900);
+  --green-surface-default: var(--color-green-900);
+  --green-surface-subtle: var(--color-green-800);
+  --green-border: var(--color-green-700);
+  --blue-surface-default: var(--color-blue-900);
+  --blue-surface-subtle: var(--color-blue-800);
+  --blue-border: var(--color-blue-700);
+  --orange-surface-default: var(--color-orange-900);
+  --orange-surface-subtle: var(--color-orange-800);
+  --orange-border: var(--color-orange-700);
+  --cream-surface-default: var(--color-cream-900);
+  --cream-surface-subtle: var(--color-cream-800);
+  --cream-border: var(--color-cream-700);
+  --red-surface-default: var(--color-red-900);
+  --red-surface-subtle: var(--color-red-800);
+  --red-border: var(--color-red-700);
+  --green-text: var(--color-green-200);
+  --green-module-bg: var(--color-green-800);
+  --green-module-fg: var(--color-green-200);
+  --blue-text: var(--color-blue-200);
+  --blue-module-bg: var(--color-blue-800);
+  --blue-module-fg: var(--color-blue-200);
+  --orange-text: var(--color-orange-200);
+  --orange-module-bg: var(--color-orange-800);
+  --orange-module-fg: var(--color-orange-200);
+  --cream-text: var(--color-cream-200);
+  --cream-module-bg: var(--color-cream-800);
+  --cream-module-fg: var(--color-cream-200);
+  --red-text: var(--color-red-200);
+  --red-module-bg: var(--color-red-800);
+  --red-module-fg: var(--color-red-200);
+}

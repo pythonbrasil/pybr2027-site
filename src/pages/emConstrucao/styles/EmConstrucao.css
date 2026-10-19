@@ -1,0 +1,67 @@
+.EmConstrucao {
+    background-color: var(--creme);
+    padding: 100px 0 130px;
+}
+
+.EmConstrucao_conteudo {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.EmConstrucao_modulos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.EmConstrucao_modulos img {
+    width: 100%;
+    border-radius: var(--raio-modulo);
+}
+
+.EmConstrucao_texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.EmConstrucao_selo {
+    padding: 6px 14px;
+    border-radius: 30px;
+    background-color: var(--laranja-quente);
+    color: var(--verde-profundo);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.EmConstrucao_texto h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.02;
+    color: var(--verde-profundo);
+}
+
+.EmConstrucao_texto p {
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 560px;
+}
+
+@media (max-width : 800px) {
+    .EmConstrucao {
+        padding: 60px 0 110px;
+    }
+
+    .EmConstrucao_conteudo {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .EmConstrucao_modulos {
+        max-width: 360px;
+    }
+}

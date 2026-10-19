@@ -1,0 +1,104 @@
+.Home_Section2 {
+    background-color: var(--creme);
+    padding: 110px 0;
+    scroll-margin-top: 20px;
+}
+
+.Home_Section2_conteudo {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.Home_Section2_parte_esquerda {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.Home_Section2_parte_esquerda img {
+    width: 100%;
+    border-radius: var(--raio-modulo);
+}
+
+.Home_Section2_modulo_grande {
+    grid-column: span 2;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    object-position: center;
+    background-color: var(--laranja-100);
+    padding: 0 25%;
+}
+
+.Home_Section2_parte_direita {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.Home_Section2_parte_direita h2 {
+    font-size: clamp(36px, 4.6vw, 60px);
+    line-height: 1;
+    color: var(--verde-profundo);
+}
+
+.Home_Section2_parte_direita_texto {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Home_Section2_parte_direita_texto p {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--texto);
+}
+
+.Home_Section2_parte_direita_texto .destaque {
+    font-weight: 800;
+    color: var(--verde-profundo);
+    background: linear-gradient(transparent 60%, var(--laranja-quente) 60%);
+}
+
+.Home_Section2_conceito {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 8px;
+    padding: 18px;
+    border-radius: var(--raio-modulo);
+    background-color: var(--azul-100);
+}
+
+.Home_Section2_conceito img {
+    width: 84px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.Home_Section2_conceito h3 {
+    font-size: 22px;
+    color: var(--verde-profundo);
+    margin-bottom: 4px;
+}
+
+.Home_Section2_conceito p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width : 900px) {
+    .Home_Section2 {
+        padding: 70px 0;
+    }
+
+    .Home_Section2_conteudo {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .Home_Section2_parte_esquerda {
+        order: 2;
+    }
+}

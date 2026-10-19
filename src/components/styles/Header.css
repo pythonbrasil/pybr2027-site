@@ -1,0 +1,159 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 0px;
+    width: 100%;
+
+    background-color: var(--verde-profundo);
+    color: var(--creme);
+    font-family: var(--fonte-texto);
+}
+
+.Header_itens {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+    width: 92%;
+    max-width: var(--largura-maxima);
+}
+
+.Header button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-family: var(--fonte-texto);
+}
+
+.Header_menu_esquerdo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 36px;
+}
+
+.Header_botao_menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.Header_hamburguer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Header_hamburguer span {
+    display: block;
+    width: 26px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--laranja-quente);
+}
+
+.Header_hamburguer span:nth-child(2) {
+    width: 18px;
+}
+
+.Header_link {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent !important;
+}
+
+.Header_link:hover {
+    border-bottom-color: var(--laranja-quente) !important;
+}
+
+.Header_logo img {
+    width: 200px;
+    height: auto;
+}
+
+.Header_menu_direito {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+}
+
+.Header_linguagem {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.Header_linguagem button {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 30px;
+    opacity: 0.8;
+}
+
+.Header_linguagem button:hover {
+    opacity: 1;
+}
+
+.Header_linguagem .lingua_selecionada {
+    background-color: var(--creme) !important;
+    color: var(--verde-profundo) !important;
+    opacity: 1;
+}
+
+.Header_botao_ingresso {
+    padding: 14px 24px;
+    font-size: 16px;
+}
+
+@media (max-width : 1100px) {
+    .Header_menu_desktop {
+        display: none;
+    }
+
+    .Header_botao_ingresso {
+        display: none;
+    }
+}
+
+@media (max-width : 650px) {
+    .Header {
+        padding: 16px 0;
+    }
+
+    .Header_itens {
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+            "menu linguas"
+            "logo logo";
+        row-gap: 18px;
+    }
+
+    .Header_menu_esquerdo {
+        grid-area: menu;
+    }
+
+    .Header_menu_direito {
+        grid-area: linguas;
+    }
+
+    .Header_logo {
+        grid-area: logo;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Header_logo img {
+        width: 70vw;
+        max-width: 280px;
+    }
+}

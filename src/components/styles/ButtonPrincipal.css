@@ -1,0 +1,54 @@
+.ButtonPrincipal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    position: fixed;
+    z-index: 50;
+    bottom: 15px;
+    pointer-events: none;
+}
+
+.ButtonPrincipal_itens {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    pointer-events: auto;
+
+    border: 2px solid var(--laranja-quente);
+    background-color: var(--verde-profundo);
+    box-shadow: 0 8px 24px rgba(23, 61, 53, 0.25);
+
+    padding: 0.5rem;
+    border-radius: 60px;
+}
+
+.ButtonPrincipal_itens a,
+.ButtonPrincipal_itens span {
+    font-family: var(--fonte-texto);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 60px;
+    background-color: var(--laranja-quente);
+    color: var(--verde-profundo);
+    transition: background-color 0.15s ease;
+}
+
+.ButtonPrincipal_itens a:hover {
+    background-color: var(--creme);
+}
+
+.ButtonPrincipal_itens .ButtonPrincipal_em_breve {
+    background-color: var(--creme-100);
+    cursor: default;
+}
+
+.ButtonPrincipal_em_breve small {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.75;
+}

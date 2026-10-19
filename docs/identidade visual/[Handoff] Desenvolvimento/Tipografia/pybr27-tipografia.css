@@ -1,0 +1,226 @@
+/* Python Brasil 2027 · Tipografia
+   Espelha os estilos de texto do Figma (Identidade-Visual, página Tipografia, Wireframe 22)
+   e as variáveis da coleção "Tipografia". Gerado em 11/10/2026.
+   [Decisão] famílias, papéis, tamanhos e entrelinhas desktop; corpo não reduz no mobile.
+   [Hipótese] pesos da Bricolage, tracking, ponto de troca mobile (48rem).
+   [Decisão] tabular-nums em horários e números em coluna (.t-tabular).
+   [Pendente] opsz da Bricolage no display, escala de impressão.
+   Carregue as fontes antes deste arquivo:
+   https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400..700&display=swap
+*/
+
+:root {
+  /* 1. Primitivos: único lugar com família, peso e tamanho soltos */
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-text: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* 2. Semânticos: um grupo por estilo de texto (valores de mobile) */
+  --type-display-xl-family: var(--font-display);
+  --type-display-xl-size: 3.5rem;
+  --type-display-xl-line-height: 1;
+  --type-display-xl-weight: var(--font-weight-extrabold);
+  --type-display-xl-tracking: -0.02em;
+  --type-display-l-family: var(--font-display);
+  --type-display-l-size: 3rem;
+  --type-display-l-line-height: 1.0833;
+  --type-display-l-weight: var(--font-weight-bold);
+  --type-display-l-tracking: -0.02em;
+  --type-display-m-family: var(--font-display);
+  --type-display-m-size: 2.5rem;
+  --type-display-m-line-height: 1.1;
+  --type-display-m-weight: var(--font-weight-bold);
+  --type-display-m-tracking: -0.015em;
+  --type-h1-family: var(--font-display);
+  --type-h1-size: 2rem;
+  --type-h1-line-height: 1.25;
+  --type-h1-weight: var(--font-weight-bold);
+  --type-h1-tracking: -0.01em;
+  --type-h2-family: var(--font-display);
+  --type-h2-size: 1.75rem;
+  --type-h2-line-height: 1.2857;
+  --type-h2-weight: var(--font-weight-semibold);
+  --type-h2-tracking: -0.01em;
+  --type-h3-family: var(--font-display);
+  --type-h3-size: 1.375rem;
+  --type-h3-line-height: 1.2727;
+  --type-h3-weight: var(--font-weight-semibold);
+  --type-h3-tracking: -0.005em;
+  --type-h4-family: var(--font-text);
+  --type-h4-size: 1.25rem;
+  --type-h4-line-height: 1.4;
+  --type-h4-weight: var(--font-weight-semibold);
+  --type-h4-tracking: 0;
+  --type-body-l-family: var(--font-text);
+  --type-body-l-size: 1.125rem;
+  --type-body-l-line-height: 1.5556;
+  --type-body-l-weight: var(--font-weight-regular);
+  --type-body-l-tracking: 0;
+  --type-body-family: var(--font-text);
+  --type-body-size: 1rem;
+  --type-body-line-height: 1.5;
+  --type-body-weight: var(--font-weight-regular);
+  --type-body-tracking: 0;
+  --type-body-s-family: var(--font-text);
+  --type-body-s-size: 0.875rem;
+  --type-body-s-line-height: 1.4286;
+  --type-body-s-weight: var(--font-weight-regular);
+  --type-body-s-tracking: 0;
+  --type-button-family: var(--font-text);
+  --type-button-size: 1rem;
+  --type-button-line-height: 1.5;
+  --type-button-weight: var(--font-weight-semibold);
+  --type-button-tracking: 0.005em;
+  --type-label-family: var(--font-text);
+  --type-label-size: 0.875rem;
+  --type-label-line-height: 1.4286;
+  --type-label-weight: var(--font-weight-semibold);
+  --type-label-tracking: 0.005em;
+  --type-overline-family: var(--font-text);
+  --type-overline-size: 0.75rem;
+  --type-overline-line-height: 1.3333;
+  --type-overline-weight: var(--font-weight-bold);
+  --type-overline-tracking: 0.08em;
+  --type-caption-family: var(--font-text);
+  --type-caption-size: 0.75rem;
+  --type-caption-line-height: 1.3333;
+  --type-caption-weight: var(--font-weight-medium);
+  --type-caption-tracking: 0.02em;
+}
+
+/* Desktop: só a Bricolage muda de tamanho. Ponto de troca [Hipótese]. */
+@media (min-width: 48rem) {
+  :root {
+    --type-display-xl-size: 6rem;
+    --type-display-xl-line-height: 1;
+    --type-display-l-size: 4.5rem;
+    --type-display-l-line-height: 1.0556;
+    --type-display-m-size: 3.5rem;
+    --type-display-m-line-height: 1.0714;
+    --type-h1-size: 2.5rem;
+    --type-h1-line-height: 1.2;
+    --type-h2-size: 2rem;
+    --type-h2-line-height: 1.25;
+    --type-h3-size: 1.5rem;
+    --type-h3-line-height: 1.3333;
+  }
+}
+
+html {
+  font-family: var(--font-text);
+  font-size: 100%; /* nunca fixe em px: respeita o tamanho escolhido no navegador */
+  font-optical-sizing: auto;
+}
+
+/* 3. Classes de estilo: a classe define a aparência; a tag HTML define a hierarquia */
+.t-display-xl {
+  font-family: var(--type-display-xl-family);
+  font-size: var(--type-display-xl-size);
+  line-height: var(--type-display-xl-line-height);
+  font-weight: var(--type-display-xl-weight);
+  letter-spacing: var(--type-display-xl-tracking);
+}
+.t-display-l {
+  font-family: var(--type-display-l-family);
+  font-size: var(--type-display-l-size);
+  line-height: var(--type-display-l-line-height);
+  font-weight: var(--type-display-l-weight);
+  letter-spacing: var(--type-display-l-tracking);
+}
+.t-display-m {
+  font-family: var(--type-display-m-family);
+  font-size: var(--type-display-m-size);
+  line-height: var(--type-display-m-line-height);
+  font-weight: var(--type-display-m-weight);
+  letter-spacing: var(--type-display-m-tracking);
+}
+.t-h1 {
+  font-family: var(--type-h1-family);
+  font-size: var(--type-h1-size);
+  line-height: var(--type-h1-line-height);
+  font-weight: var(--type-h1-weight);
+  letter-spacing: var(--type-h1-tracking);
+}
+.t-h2 {
+  font-family: var(--type-h2-family);
+  font-size: var(--type-h2-size);
+  line-height: var(--type-h2-line-height);
+  font-weight: var(--type-h2-weight);
+  letter-spacing: var(--type-h2-tracking);
+}
+.t-h3 {
+  font-family: var(--type-h3-family);
+  font-size: var(--type-h3-size);
+  line-height: var(--type-h3-line-height);
+  font-weight: var(--type-h3-weight);
+  letter-spacing: var(--type-h3-tracking);
+}
+.t-h4 {
+  font-family: var(--type-h4-family);
+  font-size: var(--type-h4-size);
+  line-height: var(--type-h4-line-height);
+  font-weight: var(--type-h4-weight);
+  letter-spacing: var(--type-h4-tracking);
+}
+.t-body-l {
+  font-family: var(--type-body-l-family);
+  font-size: var(--type-body-l-size);
+  line-height: var(--type-body-l-line-height);
+  font-weight: var(--type-body-l-weight);
+  letter-spacing: var(--type-body-l-tracking);
+}
+.t-body {
+  font-family: var(--type-body-family);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  font-weight: var(--type-body-weight);
+  letter-spacing: var(--type-body-tracking);
+}
+.t-body-s {
+  font-family: var(--type-body-s-family);
+  font-size: var(--type-body-s-size);
+  line-height: var(--type-body-s-line-height);
+  font-weight: var(--type-body-s-weight);
+  letter-spacing: var(--type-body-s-tracking);
+}
+.t-button {
+  font-family: var(--type-button-family);
+  font-size: var(--type-button-size);
+  line-height: var(--type-button-line-height);
+  font-weight: var(--type-button-weight);
+  letter-spacing: var(--type-button-tracking);
+}
+.t-label {
+  font-family: var(--type-label-family);
+  font-size: var(--type-label-size);
+  line-height: var(--type-label-line-height);
+  font-weight: var(--type-label-weight);
+  letter-spacing: var(--type-label-tracking);
+}
+.t-overline {
+  font-family: var(--type-overline-family);
+  font-size: var(--type-overline-size);
+  line-height: var(--type-overline-line-height);
+  font-weight: var(--type-overline-weight);
+  letter-spacing: var(--type-overline-tracking);
+  text-transform: uppercase;
+}
+.t-caption {
+  font-family: var(--type-caption-family);
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  font-weight: var(--type-caption-weight);
+  letter-spacing: var(--type-caption-tracking);
+}
+
+/* Texto corrido: medida de leitura [Hipótese] */
+.t-body, .t-body-l { max-width: 65ch; }
+
+/* Horários, datas em coluna, preços, contagens [Decisão].
+   Use font-variant-numeric, não font-feature-settings: este apaga outros recursos do elemento. */
+.t-tabular { font-variant-numeric: tabular-nums; }

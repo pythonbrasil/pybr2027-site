@@ -1,0 +1,146 @@
+/* Identidade visual Python Brasil 2027 · paleta "Suave e calorosa" */
+:root {
+    /* Âncoras */
+    --verde-profundo: #173D35;
+    --verde-agua: #81C7B5;
+    --azul-rio: #7FB6D0;
+    --laranja-quente: #F4BF69;
+    --creme: #FFF9EA;
+    --vermelho-coral: #D76552;
+
+    /* Níveis de apoio (módulos claros e escuros dos pictogramas) */
+    --laranja-100: #FFF0D8;
+    --laranja-700: #945A25;
+    --laranja-800: #754821;
+    --azul-100: #DDEEF3;
+    --azul-700: #336482;
+    --creme-100: #F8EFD9;
+    --creme-700: #7A6040;
+    --creme-800: #5B4933;
+    --verde-100: #DCEFE7;
+    --verde-700: #2A6654;
+    --vermelho-100: #FCE3DD;
+    --vermelho-700: #943F35;
+    --vermelho-800: #76352E;
+
+    /* Textos */
+    --texto: #2D4136;
+    --texto-suave: #566B5D;
+
+    /* Tipografia */
+    --fonte-titulo: "Bricolage Grotesque", "Figtree", sans-serif;
+    --fonte-texto: "Figtree", sans-serif;
+
+    /* Sistema de módulos */
+    --raio-modulo: 18px;
+    --linha-confluencia: 6px;
+    --largura-maxima: 1280px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    background-color: var(--creme);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    color: var(--texto);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font-family: var(--fonte-texto);
+}
+
+:focus-visible {
+    outline: 3px solid var(--azul-rio);
+    outline-offset: 3px;
+}
+
+.secao_conteudo {
+    width: 92%;
+    max-width: var(--largura-maxima);
+    margin: 0 auto;
+}
+
+.secao_subtitulo {
+    font-family: var(--fonte-texto);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--creme-700);
+}
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 28px;
+    border-radius: 60px;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    font-family: var(--fonte-texto);
+    font-weight: 700;
+    font-size: 17px;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+.botao_laranja {
+    background-color: var(--laranja-quente);
+    color: var(--verde-profundo);
+}
+
+.botao_verde {
+    background-color: var(--verde-profundo);
+    color: var(--creme);
+}
+
+.botao_contorno {
+    background-color: transparent;
+    border-color: currentColor;
+}
+
+.botao_desabilitado,
+.botao_desabilitado:hover {
+    cursor: default;
+    transform: none;
+    opacity: 0.75;
+}
+
+.botao small {
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.8;
+}

@@ -1,0 +1,121 @@
+.Menu {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+
+    background-color: var(--verde-profundo);
+    color: var(--creme);
+    overflow-y: auto;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-16px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+.Menu.aberto {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.Menu_itens {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    width: 92%;
+    max-width: var(--largura-maxima);
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 28px 0 40px;
+}
+
+.Menu_itens_botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+}
+
+.Menu_itens_botoes_linha1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Menu_itens_botoes_linha1 img {
+    width: 180px;
+}
+
+.Menu_fechar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.Menu_fechar span:first-child {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--laranja-quente);
+    color: var(--verde-profundo);
+    font-size: 18px;
+}
+
+.Menu_itens_botoes_linha2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.Menu_itens_botoes_linha2 a,
+.Menu_itens_botoes_linha2 button {
+    font-family: var(--fonte-titulo) !important;
+    font-weight: 800;
+    font-size: clamp(28px, 4.4vw, 48px);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    transition: color 0.15s ease, padding 0.15s ease;
+}
+
+.Menu_itens_botoes_linha2 a:hover,
+.Menu_itens_botoes_linha2 button:hover {
+    color: var(--laranja-quente);
+    padding-left: 10px;
+}
+
+.Menu_itens_botoes_linha3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.Menu_pictogramas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    align-content: center;
+    width: 38%;
+    max-width: 440px;
+    padding-left: 40px;
+    border-left: var(--linha-confluencia) solid var(--azul-rio);
+}
+
+.Menu_pictogramas img {
+    width: 100%;
+    border-radius: var(--raio-modulo);
+}
+
+@media (max-width : 900px) {
+    .Menu_pictogramas {
+        display: none;
+    }
+}
