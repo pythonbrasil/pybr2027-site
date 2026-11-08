@@ -22,14 +22,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: 'npm' # Agiliza o deploy nas próximas execuções
 
       - name: Instalar dependências
-        run: npm install
+        run: npm ci # Recomendado para ambientes de CI/CD por ser mais limpo que o 'install'
 
       - name: Fazer o Build (npm run build)
         run: npm run build
 
-      - name: Criar 404.html
+      - name: Criar 404.html (SPA Fallback)
         run: cp dist/index.html dist/404.html
 
       - name: Realizar Deploy
